@@ -55,10 +55,18 @@ dataset, config, fileList = dataset_handler(config)
 print(dataset, operations)
 
 # selecting appropriate pipeline
-if dataset == "medical":
-    data = medpipe.medicalPipeline(config, operations, fileList)
+if dataset == "medical": 
+    try:
+        data = medpipe.medicalPipeline(config, operations, fileList)
+    except Exception as e:
+        print("Error: ", e)
+        data = []
 if dataset == "spatioTemporal":
-    data = stpipe.spatioTemporalPipeline(config, operations, fileList)
+    try:
+        data = stpipe.spatioTemporalPipeline(config, operations, fileList)
+    except Exception as e:
+        print("Error: ", e)
+        data = []
 
 print(data)
 
