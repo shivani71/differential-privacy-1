@@ -138,5 +138,6 @@ dmypy.json
 
 data/suratITMSDPtest.json
 data/
+data
 
 pipelineOutput
