@@ -107,11 +107,14 @@ celerybeat.pid
 *.sage.py
 
 # Environments
+.dp_venv
 .env
 .venv
+dp_venv/
 env/
 venv/
 ENV/
+dp_venv.bak/
 env.bak/
 venv.bak/
 
@@ -134,5 +137,6 @@ dmypy.json
 .pyre/
 
 data/suratITMSDPtest.json
+data/
 
 pipelineOutput
